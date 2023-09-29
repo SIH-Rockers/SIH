@@ -22,5 +22,7 @@ urlpatterns = [
 
     # adding paths to different apps
     path('', include('client.urls')),
+    path('accounts/', include('allauth.urls')),
+    path('auth/', include('social_django.urls', namespace='social')),
     # path('authentication/', include('authentication.urls')),
 ]
