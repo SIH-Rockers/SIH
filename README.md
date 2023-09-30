@@ -17,6 +17,6 @@ Follow these steps to set up and run the project on your local machine:
 ### 1. Clone the Repository
 
 ```bash
-git clone [https://github.com/yourusername/legal-services-marketplace.git](https://github.com/SIH-Rockers/SIH.git)https://github.com/SIH-Rockers/SIH.git
+git clone https://github.com/SIH-Rockers/SIH.git
 cd SIH
 
