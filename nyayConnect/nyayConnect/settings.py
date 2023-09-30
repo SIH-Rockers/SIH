@@ -12,6 +12,8 @@ https://docs.djangoproject.com/en/4.2/ref/settings/
 
 from pathlib import Path
 
+from decouple import config
+
 # Build paths inside the project like this: BASE_DIR / 'subdir'.
 BASE_DIR = Path(__file__).resolve().parent.parent
 
@@ -65,8 +67,10 @@ SOCIALACCOUNT_PROVIDERS = {
     }
 }
 
-SOCIAL_AUTH_GOOGLE_OAUTH2_KEY = '435165846499-55mgrqjijb3n8r5n0t24u1h5j1vl04uo.apps.googleusercontent.com'
-SOCIAL_AUTH_GOOGLE_OAUTH2_SECRET = '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'
+
+SOCIAL_AUTH_GOOGLE_OAUTH2_KEY = config('SOCIAL_AUTH_GOOGLE_OAUTH2_KEY')
+SOCIAL_AUTH_GOOGLE_OAUTH2_SECRET = config('SOCIAL_AUTH_GOOGLE_OAUTH2_SECRET')
+
 
 MIDDLEWARE = [
     'django.middleware.security.SecurityMiddleware',
