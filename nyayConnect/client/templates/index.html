@@ -1,0 +1,478 @@
+<!-- loading static files -->
+{% load static %}
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="{% static 'client/css/index.css' %}">
+    <link rel="stylesheet" media="screen and (max-width:768px)" href="{% static 'client/css/tablet.css' %}">
+    <link rel="stylesheet" media="screen and (max-width:426px)" href="{% static 'client/css/L-phone.css' %}">
+    <link rel="stylesheet" media="screen and (max-width:376px)" href="{% static 'client/css/M-phone.css' %}">
+    <link rel="stylesheet" media="screen and (max-width:320px)" href="{% static 'client/css/S-phone.css' %}">
+    <link rel="icon" type="image/png" href="{% static 'client/images/LogoAndBanner/favicon.png' %}">
+    <!-- link for stars -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <!-- LINK FOR ICONS IN THE FOOTER SECTION -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
+        integrity="sha512-iecdLmaskl7CVkqkXNQ/ZH/XLlvWZOJyj7Yy7tcenmpD1ypASozpmT/E0iPtmFIB46ZmdtAc9eNBvH0H/ZpiBw=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <title>Nyay Connect</title>
+
+<body>
+    <!-- popup -->
+    <div class="popup-container flex-row center">
+        <div class="popup-login flex-row center">
+            <div class="image">
+                <img src="{% static 'client/images/popupImages/for_login_page_1.png' %}" alt="login image">
+                <h1>Your Gateway to Legal Services.</h1>
+            </div>
+            <div class="form-container">
+                <div class="login-container flex-col center">
+                    <div class="close">&times;</div>
+                    <div class="signin flex-col center inter">
+                        <p>Sign in to your account</p>
+                        <button class="popup-btn flex-row"><img src="{% static 'client/images/popupImages/google_icon_1.png' %}" alt="google">
+                            Continue with Google
+                        </button>
+                        <button class="popup-btn flex-row email-btn"><img src="{% static 'client/images/popupImages/email_2.png' %}"
+                                alt="email">Continue with Email</button>
+                    </div>
+                    <p class="or inter">or</p>
+                    <div class="signin flex-col center inter">
+                        <p>Create an account</p>
+                        <button class="popup-btn flex-row"><img src="{%static 'client/images/popupImages/google_icon_1.png' %}"
+                                alt="google">Continue with
+                            Google</button>
+                        <button class="popup-btn flex-row email-btn"><img src="{% static 'client/images/popupImages/email_2.png' %}"
+                                alt="email">Continue with Email</button>
+                    </div>
+                </div>
+                <div class="email-container">
+                    <div class="email-form flex-col inter center">
+                        <div class="back">Back</div>
+                        <p>Continue with Email</p>
+                        <form action="#" class="flex-col">
+                            <label for="email">Email</label>
+                            <input type="email" id="email" required>
+                            <label for="password">Password</label>
+                            <input type="password" id="password" required />
+                        </form>
+                        <button class="continue-btn">Continue</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    </div>
+    <nav class="navbar display-flex">
+        <div class="nav-left">
+            <img id="logo" src="{% static 'client/images/LogoAndBanner/logo2.png' %}" alt="Logo">
+        </div>
+        <div class="nav-items nav-right display-flex">
+            <div class="dropdown">
+                <button onclick="dropdownFunc('myDropdown1')" class="nav-values dropbtn btn">Dropdown 1</button>
+                <div id="myDropdown1" class="dropdown-content">
+                    <a href="#">Link 1</a>
+                    <a href="#">Link 2</a>
+                    <a href="#">Link 3</a>
+                </div>
+            </div>
+            <div class="dropdown">
+                <button onclick="dropdownFunc('myDropdown2')" class="nav-values dropbtn btn">Dropdown 2</button>
+                <div id="myDropdown2" class="dropdown-content">
+                    <a href="#">Link 4</a>
+                    <a href="#">Link 5</a>
+                    <a href="#">Link 6</a>
+                </div>
+            </div>
+
+            <div class="dropdown">
+                <button onclick="dropdownFunc('myDropdown3')" class="nav-values dropbtn btn">Dropdown 3</button>
+                <div id="myDropdown3" class="dropdown-content">
+                    <a href="#">Link 7</a>
+                    <a href="#">Link 8</a>
+                    <a href="#">Link 9</a>
+                </div>
+            </div>
+            <div class="nav-values btn " id="login">Login/Register</div>
+        </div>
+    </nav>
+    <!-- Banner section -->
+    <section class="banner banner-img flex-row " id="bannerID">
+        <div class="flex-col banner-text">
+            <span class="text-1">Nyay Connect</span>
+            <span class="text-2">Connecting Legal Services online</span>
+            <span class="text-3">#DigitalIndia</span>
+        </div>
+        <div class="man-img">
+            <!-- <img src="{% static 'client/images/man.png' %}" alt="man"> -->
+        </div>
+    </section>
+    <div class="man-img">
+        <img src="{% static 'client/images/man.png' %}" alt="man">
+    </div>
+    <!-- Search section starts  -->
+    <section class="">
+        <div class="search-bar">
+            <h1>Search for your services</h1>
+        </div>
+        <div class="search-container">
+            <input type="text" placeholder="Ex - I want to hire a lawyer">
+            <button class="btn remove_bord search-button">
+                Search
+            </button>
+        </div>
+    </section>
+
+    <section class="pop-services inter ">
+        <div class="services-heading">
+            <span>Popular Services</span>
+        </div>
+        <div class="services grid">
+            <div class="items flex-col box  ">
+                <div class="services-img">
+                    <a href="#"><img src="{% static 'client/images/immigration-lawyer-services-1.png' %}" alt="services_!"></a>
+                </div>
+                <div class="services-text">
+                    <a href="#"class="inner-text-bold inner-services-text link">Hire a lawyer</a>
+                    <a href="#" class="inner-text-light inner-services-text link">Get guided by a lawyer</a>
+                </div>
+            </div>
+            <div class="items flex-col box  ">
+                <div class="services-img">
+                    <a href="#"><img src="{% static 'client/images/property-lawyers-in-allahabad-services-2.png' %}" alt="services_!"></a>
+                </div>
+                <div class="services-text">
+                    <span class="inner-text-bold inner-services-text">Property services</span>
+                    <span class="inner-text-light inner-services-text">Get guided for property issues sorted</span>
+                </div>
+            </div>
+            <div class="items flex-col box  ">
+                <div class="services-img">
+                    <a href="#"><img src="{%static 'client/images/documents-notarized-importance-services-3.png' %}" alt="services_!"></a>
+                </div>
+                <div class="services-text">
+                    <span class="inner-text-bold inner-services-text">Notary Services</span>
+                    <span class="inner-text-light inner-services-text">Get your documents verified</span>
+                </div>
+            </div>
+
+        </div>
+        <div class=" load_more btn  ">
+            <a class="link" href="#">Load more</a>
+        </div>
+    </section>
+    <!-- Categories -->
+    <section>
+        <div class="categories-nyay">
+            <h2>Categories</h2>
+            <div class="category-grid">
+                <div class="category">
+                    <a class="link" href="#"><img src="{%static 'client/images/consultation-1.png' %}" alt="Consultation" />
+                        <h3>Consultation</h3>
+                    </a>
+                </div>
+                <div class="category">
+                    <a class="link" href="#"><img src="{%static 'client/images/documentation 1.png' %}" alt="Documents" />
+                        <h3>Documents</h3>
+                    </a>
+                </div>
+                <div class="category">
+                    <a class="link" href="#"><img src="{%static 'client/images/conversation (1) 1.png' %}" alt="Meditation" />
+                        <h3>Meditation</h3>
+                    </a>
+                </div>
+                <div class="category">
+                    <a class="link" href="#"><img src="{%static 'client/images/litigation 1.png' %}" alt="Litigation" />
+                        <h3>Litigation</h3>
+                    </a>
+                </div>
+                <div class="category">
+                    <a class="link" href="#"><img src="{%static 'client/images/notary 1.png' %}" alt="Notary" />
+                        <h3>Notary</h3>
+                    </a>
+                </div>
+                <div class="category">
+                    <a class="link" href="#"><img src="{%static 'client/images/analytics 1.png' %}" alt="Research" />
+                        <h3>Research</h3>
+                    </a>
+                </div>
+                <div class="category">
+                    <a class="link" href="#"><img src="{%static 'client/images/cooperation 1.png' %}" alt="Business" />
+                        <h3>Business</h3>
+                    </a>
+                </div>
+                <div class="category">
+                    <a class="link" href="#"><img src="{%static 'client/images/assets 1.png' %}" alt="Property" />
+                        <h3>Property</h3>
+                    </a>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!-- Crousal -->
+    <!-- Slideshow container -->
+    <div class="center inter rev-head">What Our Client Say</div>
+    <div class="slideshow-container">
+
+        <!-- Full-width images with number and caption text -->
+        <div class="mySlides fade">
+            <div class="reviews ">
+                <div>
+                    <a class="prev" onclick="plusSlides(-1)">&#10094;</a>
+                </div>
+                <div class="rev-inner-grid">
+                    <div class="review-1 review-box">
+                        <div class="flex-row pb-20 resp-flex-col">
+                            <div>
+                                <img src="{%static 'client/images/review/rev-1.jpeg' %}" alt="rev-1" class="img-rev-1">
+                            </div>
+                            <div class="flex-col rev-name">
+                                <strong class="rev-text-hero">Abhishek Singh</strong>
+                                <span class="rev-text">2nd yr B.tech </span>
+                            </div>
+                            <div class="stars">
+                                <span class="fa fa-star checked"></span>
+                                <span class="fa fa-star checked"></span>
+                                <span class="fa fa-star checked"></span>
+                                <span class="fa fa-star checked"></span>
+                                <span class="fa fa-star checked"></span>
+                            </div>
+                        </div>
+                        <span class="rev-text">The platform has revolutionized the legal service industry in India. It's
+                            incredibly easy to
+                            use,
+                            and it
+                            has helped me expand my practice and reach more clients. Highly recommended!
+                        </span>
+                    </div>
+                    <!-- <img src="img1.jpg" style="width:50%"> -->
+                    <div class="review-2 review-box">
+                        <div class="flex-row pb-20 resp-flex-col ">
+                            <div>
+                                <img src="{%static 'client/images/review/rev-2.jpeg' %}" alt="rev-1" class="img-rev-1">
+                            </div>
+                            <div class="flex-col rev-name">
+                                <strong class="rev-text-hero">Amitesh Mishra</strong>
+                                <span class="rev-text">2nd yr B.tech </span>
+                            </div>
+                            <div class="stars">
+                                <span class="fa fa-star checked"></span>
+                                <span class="fa fa-star checked"></span>
+                                <span class="fa fa-star checked"></span>
+                                <span class="fa fa-star checked"></span>
+                                <span class="fa fa-star  checked"></span>
+                            </div>
+                        </div>
+                        <span class="rev-text">I've been using this platform for a while now, and it has significantly
+                            increased my
+                            visibility
+                            as a
+                            legal service provider. The incentives-based design is a game-changer!</span>
+                    </div>
+                </div>
+
+                <div>
+                    <!-- Next and previous buttons -->
+                    <a class="next" onclick="plusSlides(1)">&#10095;</a>
+                </div>
+            </div>
+        </div>
+        <div class="mySlides fade">
+            <div class="reviews">
+                <div>
+                    <a class="prev" onclick="plusSlides(-1)">&#10094;</a>
+                </div>
+                <div class="rev-inner-grid">
+                    <div class="review-1 review-box">
+                        <div class="flex-row pb-20 resp-flex-col">
+                            <div>
+                                <img src="{%static 'client/images/review/rev-3.jpeg' %}" alt="rev-1" class="img-rev-1">
+                            </div>
+                            <div class="flex-col rev-name">
+                                <strong class="rev-text-hero">Satya Prakash </strong>
+                                <span class="rev-text">2nd yr B.tech </span>
+                            </div>
+                            <div class="stars">
+                                <span class="fa fa-star checked"></span>
+                                <span class="fa fa-star checked"></span>
+                                <span class="fa fa-star checked"></span>
+                                <span class="fa fa-star checked"></span>
+                                <span class="fa fa-star checked"></span>
+                            </div>
+                        </div>
+                        <span class="rev-text">Satya here! This platform has made it so convenient for legal service
+                            providers like me to connect with clients. The support team is excellent, and I love the
+                            incentives they offer.
+                        </span>
+                    </div>
+                    <!-- <img src="img1.jpg" style="width:50%"> -->
+                    <div class="review-2 review-box">
+                        <div class="flex-row pb-20 resp-flex-col">
+                            <div>
+                                <img src="{%static 'client/images/review/rev-4.jpeg' %}" alt="rev-1" class="img-rev-1">
+                            </div>
+                            <div class="flex-col rev-name">
+                                <strong class="rev-text-hero">Manvi Arora</strong>
+                                <span class="rev-text">2nd yr B.tech </span>
+                            </div>
+                            <div class="stars">
+                                <span class="fa fa-star checked"></span>
+                                <span class="fa fa-star checked"></span>
+                                <span class="fa fa-star checked"></span>
+                                <span class="fa fa-star checked"></span>
+                                <span class="fa fa-star  checked"></span>
+                            </div>
+                        </div>
+                        <span class="rev-text">Manvi here! I can't imagine running my legal services without this
+                            platform
+                            anymore. The incentives are a big motivator, and the user experience is top-notch!</span>
+                    </div>
+                </div>
+                <div>
+                    <!-- Next and previous buttons -->
+                    <a class="next" onclick="plusSlides(1)">&#10095;</a>
+                </div>
+            </div>
+        </div>
+        <div class="mySlides fade">
+            <div class="reviews">
+                <div>
+                    <a class="prev" onclick="plusSlides(-1)">&#10094;</a>
+                </div>
+                <div class="rev-inner-grid">
+                    <div class="review-1 review-box">
+                        <div class="flex-row pb-20 resp-flex-col">
+                            <div>
+                                <img src="{%static 'client/images/review/rev-5.jpeg' %}" alt="rev-1" class="img-rev-1">
+                            </div>
+                            <div class="flex-col rev-name">
+                                <strong class="rev-text-hero">Khushi Aggarwal</strong>
+                                <span class="rev-text">2nd yr B.tech </span>
+                            </div>
+                            <div class="stars">
+                                <span class="fa fa-star checked"></span>
+                                <span class="fa fa-star checked"></span>
+                                <span class="fa fa-star checked"></span>
+                                <span class="fa fa-star checked"></span>
+                                <span class="fa fa-star checked"></span>
+                            </div>
+                        </div>
+                        <span class="rev-text">Khushi here! I'm impressed with how this platform brings together legal
+                            service providers and citizens. It's a win-win for everyone, and the incentives make it even
+                            better!
+                        </span>
+                    </div>
+                    <!-- <img src="img1.jpg" style="width:50%"> -->
+                    <div class="review-2 review-box">
+                        <div class="flex-row pb-20 resp-flex-col">
+                            <div>
+                                <img src="{%static 'client/images/review/rev-6.jpeg' %}" alt="rev-1" class="img-rev-1">
+                            </div>
+                            <div class="flex-col rev-name">
+                                <strong class="rev-text-hero">Prayag Thakur</strong>
+                                <span class="rev-text">2nd yr B.tech </span>
+                            </div>
+                            <div class="stars">
+                                <span class="fa fa-star checked"></span>
+                                <span class="fa fa-star checked"></span>
+                                <span class="fa fa-star checked"></span>
+                                <span class="fa fa-star checked"></span>
+                                <span class="fa fa-star  checked"></span>
+                            </div>
+                        </div>
+                        <span class="rev-text">Prayag here! I can't express how much this platform has helped me in
+                            my legal practice. The incentives provided are a great motivator, and the user-friendly
+                            interface makes it a pleasure to work with. I highly recommend it to all legal service
+                            providers.</span>
+                    </div>
+                </div>
+                <div>
+                    <!-- Next and previous buttons -->
+                    <a class="next" onclick="plusSlides(1)">&#10095;</a>
+                </div>
+            </div>
+        </div>
+
+    </div>
+    <br>
+
+    <!-- The dots/circles -->
+    <div style="text-align:center">
+        <span class="dot" onclick="currentSlide(1)"></span>
+        <span class="dot" onclick="currentSlide(2)"></span>
+        <span class="dot" onclick="currentSlide(3)"></span>
+    </div>
+    <!-- footer -->
+    <footer>
+        <div class="footer-container">
+            <div class="about">
+                <h2>About us</h2>
+                <p>
+                    Lorem ipsum dolor sit, amet consectetur adipisicing elit. Eum
+                    sapiente autem deleniti provident obcaecati tempora ipsum non quam.
+
+                </p>
+                <ul class="links">
+                    <li>
+                        <a href="#facebook"><i class="fa-brands fa-facebook-f"></i></a>
+                    </li>
+                    <li>
+                        <a href="#twitter"><i class="fa-brands fa-twitter"></i></a>
+                    </li>
+                    <li>
+                        <a href="#insta"><i class="fa-brands fa-instagram"></i></a>
+                    </li>
+                    <li>
+                        <a href="#youtube"><i class="fa-brands fa-youtube"></i></a>
+                    </li>
+                </ul>
+            </div>
+            <div class="quicklinks">
+                <h2>Support</h2>
+                <ul>
+                    <li><a href="#">FAQ</a></li>
+                    <li><a href="#">Privacy Policy</a></li>
+                    <li><a href="#">Help</a></li>
+                    <li><a href="#">Contact</a></li>
+                </ul>
+            </div>
+            <div class="quicklinks">
+                <h2>Shop</h2>
+                <ul>
+                    <li><a href="#">Men</a></li>
+                    <li><a href="#">Women</a></li>
+                    <li><a href="#">Kids</a></li>
+                    <li><a href="#">Shoes</a></li>
+                </ul>
+            </div>
+            <div class="contact">
+                <h2>Contact us</h2>
+                <ul class="info">
+                    <li>
+                        <span><i class="fa-solid fa-phone"></i></span>
+                        <p><a href="#">+91 1234567890</a></p>
+                    </li>
+                    <li>
+                        <span><i class="fa-solid fa-envelope"></i></i></span>
+                        <p><a href="#" id="email">nyayconnect@gmail.com</a></p>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </footer>
+    <div class="copyrighttext">
+        <p>Copyright &copy 2023 Nyay Connect. All rights are reserved.</p>
+    </div>
+
+    <script src="{%static 'client/js/index.js' %}"></script>
+    <!-- <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL"
+        crossorigin="anonymous"></script> -->
+</body>
+</body>
+
+</html>

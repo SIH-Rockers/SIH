@@ -68,7 +68,7 @@ def home(request):
 
     # ______________________________________ email body ends here _____________________________________
 
-    return render(request, 'home.html')
+    return render(request, 'index.html')
 
 
 
