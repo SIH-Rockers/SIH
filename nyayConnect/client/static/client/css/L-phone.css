@@ -1,0 +1,116 @@
+/* body{
+    background-color: red;
+} */
+
+/* Making navbar responsive */
+.nav-items {
+  display: none;
+}
+
+#logo img {
+  width: 3rem;
+}
+
+
+/* Creating a responsive banner */
+.banner-text {
+  position: relative;
+}
+
+.text-1 {
+
+  font-weight: 400;
+  font-size: 25px;
+  color: white;
+}
+
+.text-2 {
+  font-size: 20px;
+  font-weight: 400;
+  color: #ffd700;
+
+}
+
+.text-3 {
+  font-size: 15px;
+  color: white;
+}
+
+.man-img img {
+  height: 9rem;
+  right: 3px;
+  top: 74px;
+  /* padding-right: 1.5rem; */
+  /* padding-top: 2rem; */
+}
+.banner-text {
+  margin: 20px 15px;
+  /* margin-top: 37px;
+  margin-bottom: 38px;
+  margin-left: 40px; */
+}
+.banner{
+  margin: 43px 25px;
+}
+
+/* search box */
+.search-bar{
+  margin-bottom: 2rem;
+}
+.search-bar h1{
+  font-size: 1.3rem;
+}
+.search-button{
+  padding: 15px 20px;
+  font-size: 1.3rem;
+}
+
+.search-container input{
+  font-size: 0.8rem;
+}
+
+/* popular services section  */
+.grid{
+  grid-template-columns: repeat(1,6fr);
+  row-gap: 3.5rem;
+}
+
+
+/* Categories section  */
+.category-grid {
+  display: grid;
+  /* margin-left: 13px; */
+  grid-template-columns: repeat(2, 2fr);
+  grid-gap: 1rem;
+  max-width: 950px;
+  margin: 50px auto;
+}
+
+/* Review section */
+.rev-inner-grid{
+  grid-template-columns: repeat(1,6fr);
+}
+.resp-flex-col{
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+}
+.stars{
+  margin-left: unset;
+}
+.rev-name{
+  padding-left: unset;
+}
+
+/* Footer */
+footer{
+  padding: 20px 10px;
+}
+footer .footer-container{
+  grid-template-columns: repeat(2,2.5fr);
+}
+.copyrighttext{
+  padding: 10px 20px 10px;
+}

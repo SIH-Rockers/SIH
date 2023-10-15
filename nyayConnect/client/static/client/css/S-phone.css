@@ -1,0 +1,29 @@
+/* search section */
+.search-bar{
+   font-size: 10px;
+}
+.search-container input{
+   font-size: 12px;
+   padding: 0.5rem;
+}
+.search-button{
+   font-size: 12px;
+   padding: 10px 9.5px;
+}
+/* Cotegories section */
+.category-grid {
+    display: grid;
+    /* margin-left: 13px; */
+    grid-template-columns: repeat(2, 2fr);
+    grid-gap: 10px;
+    max-width: 950px;
+    margin: 50px auto;
+  }
+/* Footer */
+ footer .footer-container{
+    grid-template-columns: repeat(1,auto);
+ } 
+
+ footer .quicklinks{
+   display: none;
+ }
