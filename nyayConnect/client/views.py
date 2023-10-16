@@ -1,10 +1,42 @@
 from django.shortcuts import render, HttpResponse, redirect
 from django.contrib.auth import logout
 from django.core.mail import send_mail
-from django.contrib.auth import get_user_model
+from django.contrib.auth import get_user_model          # importing get_user_model to get the custom user model
+from django.contrib import messages
+from django.contrib.auth import authenticate, login, logout
 
 # Create your views here.
 def home(request):
+
+    # signUp form fuctions
+    if request.method == "POST":
+        email = request.POST.get("email")
+        password = request.POST.get("password")
+
+        User = get_user_model()
+
+        if User.objects.filter(email=email):  
+            messages.error(request, "Email already exist! Try another Email.")
+            return redirect('homePage')
+        
+        else:
+            # Adding the details of user into  Database Table
+            myuser = User.objects.create_user(email, password)
+
+            myuser.save()
+
+            messages.success(request,"Hello "+ email +", your account has been successfully created !!!")
+            print("Hello "+ email +", your account has been successfully created !!!")
+
+            user=authenticate(email=email, password=password)
+
+            if user is not None:
+                login(request, user)
+                messages.success(request,"Logged in !")
+                return redirect("homePage")
+
+
+
 
     # Check if the user is authenticated
     if request.user.is_authenticated:

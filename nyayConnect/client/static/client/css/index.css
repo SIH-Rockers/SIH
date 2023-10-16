@@ -361,6 +361,11 @@
   position: relative;
 }
 
+.loginLink {
+  text-decoration: none;
+  color: #000;
+}
+
 .man-img img {
   position: absolute;
   /* z-index: 1; */
